@@ -1,12 +1,12 @@
 import { Navbar, SiteLayout } from '@/components/layout'
-import FoundationPreview from '@/dev/FoundationPreview'
+import { Hero } from '@/sections/Hero'
 
 // The Footer fills SiteLayout's `footer` slot once built.
-// Homepage sections will live in src/sections and be composed here.
+// Homepage sections live in src/sections and are composed here, in order.
 export default function App() {
   return (
     <SiteLayout header={<Navbar />}>
-      <FoundationPreview />
+      <Hero />
     </SiteLayout>
   )
 }
