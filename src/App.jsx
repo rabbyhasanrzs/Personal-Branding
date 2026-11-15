@@ -1,5 +1,5 @@
 import { Navbar, SiteLayout } from '@/components/layout'
-import { About, Expertise, FeaturedWork, Hero, Philosophy, Research } from '@/sections'
+import { About, Education, Expertise, FeaturedWork, Hero, Philosophy, Research } from '@/sections'
 
 // The Footer fills SiteLayout's `footer` slot once built.
 // Homepage sections live in src/sections and are composed here, in order.
@@ -12,6 +12,7 @@ export default function App() {
       <Expertise />
       <FeaturedWork />
       <Research />
+      <Education />
     </SiteLayout>
   )
 }
