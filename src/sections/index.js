@@ -1,4 +1,5 @@
 export { About } from './About'
 export { Expertise } from './Expertise'
+export { FeaturedWork } from './FeaturedWork'
 export { Hero } from './Hero'
 export { Philosophy } from './Philosophy'
