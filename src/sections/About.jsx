@@ -20,10 +20,13 @@ const FACTS = [
 ]
 
 /**
- * About (blueprint §06): concise biography, current learning direction,
- * and a facts panel. The bio is the approved copy — worded differently
- * from the hero paragraph, never repeated verbatim. The closing line uses
- * Georgia, the one editorial typeface the design system allows here.
+ * About (blueprint §06): portrait, concise biography, current learning
+ * direction, and a facts panel. The bio is the approved copy — worded
+ * differently from the hero paragraph, never repeated verbatim. The closing
+ * line uses Georgia, the one editorial typeface the design system allows
+ * here. The portrait is `public/Professional Navy Suit Portrait.png`,
+ * uploaded to the branch by the user via the GitHub web UI (binary files
+ * cannot go through the text-only push).
  */
 export function About() {
   return (
@@ -66,7 +69,17 @@ export function About() {
         </Reveal>
 
         <Reveal delay={0.1} className="lg:col-span-2">
-          <dl className="rounded-showcase border border-line bg-raised p-6 md:p-7">
+          <figure>
+            <img
+              src="/Professional Navy Suit Portrait.png"
+              alt="Portrait of Md. Rabby Hasan"
+              width="1122"
+              height="1402"
+              loading="lazy"
+              className="aspect-[4/5] w-full rounded-showcase border border-line object-cover"
+            />
+          </figure>
+          <dl className="mt-6 rounded-showcase border border-line bg-raised p-6 md:p-7">
             {FACTS.map((fact) => (
               <div
                 key={fact.label}
