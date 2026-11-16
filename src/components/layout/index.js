@@ -1,4 +1,6 @@
 export { Container } from './Container'
+export { Footer } from './Footer'
+export { Navbar } from './Navbar'
 export { Section } from './Section'
 export { SiteLayout } from './SiteLayout'
 export { SkipLink } from './SkipLink'
