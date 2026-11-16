@@ -4,11 +4,14 @@ import { site } from '@/data/site'
 
 // Verified social links, in the order they are shown. Every URL here was
 // supplied or verified by the user — never a placeholder.
+// Icons stay monochrome by default; on hover (and keyboard focus) each
+// takes its brand colour — GitHub and X are monochrome brands, so they
+// simply brighten to the foreground colour.
 const SOCIALS = [
-  { label: 'GitHub', href: site.links.github, Icon: GithubIcon },
-  { label: 'LinkedIn', href: site.links.linkedin, Icon: LinkedinIcon },
-  { label: 'X', href: site.links.x, Icon: XIcon },
-  { label: 'Facebook', href: site.links.facebook, Icon: FacebookIcon },
+  { label: 'GitHub', href: site.links.github, Icon: GithubIcon, hover: 'hover:text-fg focus-visible:text-fg' },
+  { label: 'LinkedIn', href: site.links.linkedin, Icon: LinkedinIcon, hover: 'hover:text-brand-linkedin focus-visible:text-brand-linkedin' },
+  { label: 'X', href: site.links.x, Icon: XIcon, hover: 'hover:text-fg focus-visible:text-fg' },
+  { label: 'Facebook', href: site.links.facebook, Icon: FacebookIcon, hover: 'hover:text-brand-facebook focus-visible:text-brand-facebook' },
 ]
 
 /**
@@ -32,14 +35,14 @@ export function Footer() {
             <p className="mt-2 text-sm text-fg-secondary">{site.tagline}</p>
           </div>
           <ul className="flex items-center gap-2">
-            {SOCIALS.map(({ label, href, Icon }) => (
+            {SOCIALS.map(({ label, href, Icon, hover }) => (
               <li key={label}>
                 <a
                   href={href}
                   target="_blank"
                   rel="noreferrer"
                   aria-label={label}
-                  className="flex size-10 items-center justify-center rounded-lg border border-line bg-surface text-fg-secondary transition-colors hover:border-fg-muted hover:text-fg"
+                  className={`flex size-10 items-center justify-center rounded-lg border border-line bg-surface text-fg-secondary transition-colors hover:border-fg-muted ${hover}`}
                 >
                   <Icon className="size-5" />
                 </a>

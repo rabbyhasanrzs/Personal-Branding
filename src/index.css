@@ -70,6 +70,10 @@
   --content-wide: 1280px; /* maximum content width */
   --nav-h: 4.5rem; /* 72px sticky navigation bar */
 
+  /* Brand colours — theme-independent; only for social-icon hover states. */
+  --brand-linkedin: #0a66c2;
+  --brand-facebook: #1877f2;
+
   /* Gutters — mobile 20–24, tablet 28–36, desktop 40–56 */
   --gutter: 1.25rem;
   /* Section spacing — mobile 64–88, tablet 80–104, desktop 100–144 */
@@ -116,6 +120,8 @@
   --color-accent-text: var(--accent-text);
   --color-accent-fg: var(--accent-fg);
   --color-accent-violet: var(--accent-violet);
+  --color-brand-linkedin: var(--brand-linkedin);
+  --color-brand-facebook: var(--brand-facebook);
 }
 
 @theme {
