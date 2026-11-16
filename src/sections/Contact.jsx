@@ -6,8 +6,8 @@ import { site } from '@/data/site'
 
 /**
  * Contact (blueprint §09): make professional contact straightforward.
- * Only verified links are shown — GitHub and LinkedIn for now. Email
- * is added once verified; no placeholder links, ever.
+ * Only verified links are shown — GitHub, LinkedIn and email. No
+ * placeholder links, ever.
  */
 export function Contact() {
   return (
@@ -29,6 +29,14 @@ export function Contact() {
             Connect on LinkedIn
           </Button>
         </div>
+        <p className="mt-6">
+          <a
+            href={`mailto:${site.links.email}`}
+            className="font-mono text-meta text-fg-muted underline-offset-4 transition-colors hover:text-fg hover:underline"
+          >
+            {site.links.email}
+          </a>
+        </p>
       </Reveal>
     </Section>
   )
