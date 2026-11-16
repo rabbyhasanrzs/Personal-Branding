@@ -63,6 +63,24 @@ Copy and claims follow PERSONAL_BRAND.md and PORTFOLIO_CONTENT.md: no invented m
 honest project status, no placeholder links. Contact links (GitHub, LinkedIn, X, Facebook,
 email) are all verified.
 
+## Deploy (Vercel)
+
+No `vercel.json` is needed — Vercel auto-detects the Vite framework. Import the
+repository in the Vercel dashboard and confirm these settings:
+
+- Framework preset: **Vite**
+- Build command: `npm run build`
+- Output directory: `dist`
+- Install command: `npm install`
+- Node version: 20.19+ (the `engines` field in `package.json` already requires it)
+
+No environment variables are needed — the site has no secrets, no API keys, and no
+backend. The production branch is `main`; every pull request gets a preview
+deployment automatically.
+
+After the first deploy, add the live domain to `index.html` as `og:url` and a
+`rel="canonical"` link — both are intentionally absent until the domain is known.
+
 ## Status
 
 Work is developed on feature branches and reviewed through pull requests; `main` is not changed directly. The site is not deployed yet.
