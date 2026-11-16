@@ -6,8 +6,8 @@ import { site } from '@/data/site'
 
 /**
  * Contact (blueprint §09): make professional contact straightforward.
- * Only verified links are shown — GitHub for now. Email and LinkedIn
- * are added once verified; no placeholder links, ever.
+ * Only verified links are shown — GitHub and LinkedIn for now. Email
+ * is added once verified; no placeholder links, ever.
  */
 export function Contact() {
   return (
@@ -21,12 +21,14 @@ export function Contact() {
           I&apos;m interested in learning, collaborating, contributing to engineering projects,
           and connecting with people working across AI/ML and software development.
         </p>
-        <div className="mt-8 flex justify-center">
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
           <Button href={site.links.github} variant="primary" size="lg" arrow>
             Get in Touch
           </Button>
+          <Button href={site.links.linkedin} variant="secondary" size="lg" arrow>
+            Connect on LinkedIn
+          </Button>
         </div>
-        <p className="mt-6 font-mono text-meta text-fg-muted">GITHUB — RABBYHASANRZS</p>
       </Reveal>
     </Section>
   )
