@@ -1,32 +1,46 @@
 # The Lab Notebook — Md. Rabby Hasan
 
-Personal portfolio. React 19 · Vite 8 · JavaScript · Tailwind CSS 4 · Framer Motion · Lucide React.
+Personal portfolio of Md. Rabby Hasan, an aspiring AI/ML Engineer. "The Lab Notebook" — a living record of research, engineering, and continuous learning.
+
+React 19 · Vite 8 · JavaScript · Tailwind CSS 4 · Framer Motion · Lucide React.
 
 ```bash
 npm install
 npm run dev      # http://localhost:5173
 npm run build    # production build → dist/
+npm run preview  # serve the production build → http://localhost:4173
 npm run lint     # oxlint
 ```
 
 Requires Node 20.19+ (tested on Node 22).
+
+## Homepage sections
+
+In order: Navigation, Hero, Philosophy, About, Technical Expertise, Featured Work, Research, Education, Contact, Footer.
+
+- **Featured Work** — two projects: Diabetic Retinopathy Classification & Explainability (in progress) and the RabbY Food Delivery Android app (completed).
+- **Research** — the ongoing DR project plus six research interests, each honestly labelled.
+- **Writing** and **Recently Shipped** stay hidden until real content exists; the nav lists only sections that exist.
 
 ## Structure
 
 ```
 src/
   main.jsx                 ThemeProvider + MotionConfig (reduced-motion) + <App />
-  App.jsx                  Composes SiteLayout; sections get added here
+  App.jsx                  Composes SiteLayout; homepage sections in order
   index.css                Design tokens, type scale, layout vars, base styles
   components/
-    layout/                Container, Section, SiteLayout, SkipLink
-    ui/                    Button, Eyebrow, SectionHeader, StatusLabel, TechTag, ThemeToggle
+    layout/                Container, Section, SiteLayout, SkipLink, Navbar, Footer
+    ui/                    Button, Eyebrow, SectionHeader, StatusLabel, TechTag,
+                           ThemeToggle, SocialIcons
     motion/                Reveal (fade + translate, once)
-  sections/                Homepage sections (Hero, Philosophy, …) — next phase
+  sections/                Hero, Philosophy, About, Expertise, FeaturedWork,
+                           Research, Education, Contact
   theme/                   ThemeProvider, useTheme, constants
-  data/                    site.js (name, nav), statuses.js (status vocabulary)
+  data/                    site.js (name, nav, verified links),
+                           projects.js (featured projects),
+                           statuses.js (status vocabulary)
   lib/                     cn() class joiner
-  dev/FoundationPreview    TEMPORARY verification screen — delete when sections land
 ```
 
 Import with the `@` alias: `import { Button } from '@/components/ui'`.
@@ -46,4 +60,9 @@ Import with the `@` alias: `import { Button } from '@/components/ui'`.
 ## Content rules
 
 Copy and claims follow PERSONAL_BRAND.md and PORTFOLIO_CONTENT.md: no invented metrics,
-honest project status, no placeholder links. Contact links are omitted until verified.
+honest project status, no placeholder links. Contact links (GitHub, LinkedIn, X, Facebook,
+email) are all verified.
+
+## Status
+
+Work is developed on feature branches and reviewed through pull requests; `main` is not changed directly. The site is not deployed yet.

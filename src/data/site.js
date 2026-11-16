@@ -19,10 +19,11 @@ export const site = {
 }
 
 // Order matches the global navigation spec. `id` is the section anchor.
+// Writing stays out until the Writing section exists — a nav link with no
+// section to land on is a dead link. It returns here when real writing lands.
 export const navItems = [
   { id: 'work', label: 'Work' },
   { id: 'research', label: 'Research' },
-  { id: 'writing', label: 'Writing' },
   { id: 'about', label: 'About' },
   { id: 'contact', label: 'Contact' },
 ]

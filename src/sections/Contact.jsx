@@ -22,7 +22,7 @@ export function Contact() {
           and connecting with people working across AI/ML and software development.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Button href={site.links.github} variant="primary" size="lg" arrow>
+          <Button href={`mailto:${site.links.email}`} variant="primary" size="lg" arrow>
             Get in Touch
           </Button>
           <Button href={site.links.linkedin} variant="secondary" size="lg" arrow>
