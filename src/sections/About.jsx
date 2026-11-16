@@ -86,7 +86,8 @@ export function About() {
                 className="border-b border-line py-4 first:pt-0 last:border-b-0 last:pb-0"
               >
                 <dt>
-                  <Eyebrow>{fact.label}</Eyebrow>
+                  {/* span, not p: a <dt> may only contain phrasing content. */}
+                  <Eyebrow as="span">{fact.label}</Eyebrow>
                 </dt>
                 <dd className="mt-2 text-fg">{fact.value}</dd>
               </div>

@@ -37,19 +37,23 @@ export function Footer() {
             <p className="mt-2 text-sm text-fg-secondary">{site.tagline}</p>
           </div>
           <ul className="flex items-center gap-2">
-            {SOCIALS.map(({ label, href, Icon, hover }) => (
-              <li key={label}>
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={label}
-                  className={`flex size-10 items-center justify-center rounded-lg border border-line bg-surface text-fg-secondary transition-colors hover:border-fg-muted ${hover}`}
-                >
-                  <Icon className="size-5" />
-                </a>
-              </li>
-            ))}
+            {SOCIALS.map(({ label, href, Icon, hover }) => {
+              // External profiles open in a new tab; the email link must not —
+              // target="_blank" on a mailto: opens a blank tab in some browsers.
+              const isExternal = href.startsWith('http')
+              return (
+                <li key={label}>
+                  <a
+                    href={href}
+                    {...(isExternal ? { target: '_blank', rel: 'noreferrer' } : {})}
+                    aria-label={label}
+                    className={`flex size-10 items-center justify-center rounded-lg border border-line bg-surface text-fg-secondary transition-colors hover:border-fg-muted ${hover}`}
+                  >
+                    <Icon className="size-5" />
+                  </a>
+                </li>
+              )
+            })}
           </ul>
         </div>
         <div className="mt-10 flex flex-col gap-2 border-t border-line pt-6 text-meta text-fg-muted md:flex-row md:items-center md:justify-between">
