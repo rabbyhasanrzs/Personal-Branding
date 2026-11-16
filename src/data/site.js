@@ -1,7 +1,7 @@
 // Site-wide constants. Copy comes from PORTFOLIO_CONTENT.md.
 // Contact links appear only once verified — never ship placeholder links.
-// GitHub was verified 2026-11-16 (profile rabbyhasanrzs); email and
-// LinkedIn stay absent until verified values are supplied.
+// GitHub was verified 2026-11-16 (profile rabbyhasanrzs); LinkedIn, X and
+// Facebook were supplied by the user the same day. Email is still pending.
 
 export const site = {
   name: 'Md. Rabby Hasan',
@@ -10,6 +10,9 @@ export const site = {
   contactCta: "Let's Connect",
   links: {
     github: 'https://github.com/rabbyhasanrzs',
+    linkedin: 'https://www.linkedin.com/in/md-rabby-hasan-524093294/',
+    x: 'https://x.com/MDRABBY38658653',
+    facebook: 'https://www.facebook.com/rabby.hasanrzs',
   },
 }
 
